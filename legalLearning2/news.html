@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal News Portal</title>
+    <link rel="stylesheet" href="CSS/news.css">
+    <style>
+        #google_translate_element {
+            height: 20px;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,as,bn,gu,hi,kn,ml,mr,ne,or,pa,sa,ta,te,ur,bho,mai,kok,sd,npi,ks,sat,li',
+                    layout: google.translate.TranslateElement.InlineLayout,
+                    disableAutoTranslation: true, // Disable automatic translation
+                    multilanguagePage: true, // Allow users to select language
+                    translateText: 'Select Language' // Customize the search bar text
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Legal News</h1>
+        <div id="google_translate_element" class="ml-auto"></div>
+    </header>
+    <main>
+        <div id="news-container"></div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Legal News Portal</p>
+    </footer>
+    <script src="js/news.js"></script>
+</body>
+
+</html>

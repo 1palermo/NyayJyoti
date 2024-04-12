@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/login.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="static/lawimg.jpg" height="750" width="700">
+        </div>
+        <div class="right">
+            <div class="strip">
+                <h1>Welcome to NyayJyoti Portal</h1>
+            </div>
+            <div class="box">
+                <h2>Login</h2>
+                <input type="text" placeholder="Enter your name" id="name">
+                <input type="tel" placeholder="Enter your mobile number" id="mobileNumber">
+                <button onclick="next()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function next() {
+            const name = document.getElementById('name').value;
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            
+            window.location.href = "otp.html";
+        }
+    </script>
+</body>
+</html>

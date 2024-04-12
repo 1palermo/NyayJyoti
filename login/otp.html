@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="static/login.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="static/lawimg.jpg" height="750" width="750" >
+        </div>
+        <div class="right">
+            <div class="strip">
+                <h1>Welcome to NyayJyoti Portal</h1>
+            </div>
+            <h1>OTP Verification</h1>
+            <p>Enter the OTP sent to your mobile number:</p>
+            <div class="otp-box">
+                <input type="text" class="otp-input" id="otp1" maxlength="1" onkeyup="moveToNext(this, 'otp2')">
+                <input type="text" class="otp-input" id="otp2" maxlength="1" onkeyup="moveToNext(this, 'otp3')">
+                <input type="text" class="otp-input" id="otp3" maxlength="1" onkeyup="moveToNext(this, 'otp4')">
+                <input type="text" class="otp-input" id="otp4" maxlength="1" onkeyup="moveToNext(this, 'otp5')">
+                <input type="text" class="otp-input" id="otp5" maxlength="1" onkeyup="moveToNext(this, 'otp6')">
+                <input type="text" class="otp-input" id="otp6" maxlength="1" onkeyup="moveToNext(this, 'otp6')">
+            </div>
+            <form action="/Nyay-jyoti/discussYourdouts2/discuss.html">
+                <button type="submit">Verify OTP</button>
+            </form>
+        <p id="timer">Time remaining: 1:00</p>
+        <button id="resend" onclick="resendOTP()" disabled>Resend OTP</button>
+        </div>
+    </div>
+
+    <script>
+        let timerInterval;
+        let timeLeft = 60;
+
+        function startTimer() {
+            timerInterval = setInterval(function() {
+                timeLeft--;
+                if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('resend').disabled = false;
+                    document.getElementById('timer').textContent = "Resend OTP";
+                } else {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    document.getElementById('timer').textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                }
+            }, 1000);
+        }
+
+        function resendOTP() {
+           
+            alert("OTP resended Successfully");
+
+            
+            timeLeft = 60;
+            document.getElementById('resend').disabled = true;
+            startTimer();
+        }
+
+        
+        function moveToNext(input, nextInputId) {
+            if (input.value.length === 1) {
+                document.getElementById(nextInputId).focus();
+            }
+        }
+
+        
+        startTimer();
+    </script>
+</body>
+</html>
