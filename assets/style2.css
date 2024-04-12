@@ -22,3 +22,14 @@
     display: none;
     overflow: hidden;
   }
+  .carousel-container{
+    margin-top: 25px;
+  }
+  @media screen and (max-width: 576px) {
+    .carousel-container{
+      font-size: 30px;
+      letter-spacing: 4px;
+      margin-bottom: 5px;
+      margin-top: 25px;
+    }
+  }
