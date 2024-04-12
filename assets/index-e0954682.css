@@ -1421,3 +1421,10 @@ svg {
     transform: translateY(0px);
   }
 }
+
+.complaint-heading {
+  font-size: 2.5rem; /* Adjust size as needed */
+  color: #333; /* Adjust color as needed */
+  text-align: center; /* Center align by default */
+  margin: 2rem 0; /* Add some margin */
+}
