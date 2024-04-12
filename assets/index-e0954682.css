@@ -838,17 +838,27 @@ header a:last-child:hover {
 }
 .service-card .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 25px; /* Adjust padding as needed */
   background-color: #031968;
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
   font-weight: 700;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative; /* Enable hover effects */
+  width: fit-content; /* Set width to fit content for better control */
 }
+
 .service-card .btn:hover {
-  background-color: #0728a1;
-  color: #fff;
+  background-color: black;
+  color: #fce302;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px) scale(1.05); /* Add slight upward movement and scale up on hover */
+}
+
+.service-card .btn:mouseout {
+  transform: translateY(0) scale(1); /* Reset transform on mouseout */
 }
 .section {
   padding: 30px 70px 0;
@@ -870,18 +880,28 @@ header a:last-child:hover {
 }
 .section .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Adjust padding as needed */
   background-color: #031968;
   color: #fff;
   text-decoration: none;
   margin-right: 20px;
   border-radius: 20px;
   font-weight: 700;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease; /* Target all properties for smoother transition */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Add subtle shadow */
+  position: relative; /* Enable hover effects */
+  width: fit-content; /* Set width to fit content for better control */
 }
+
 .section .btn:hover {
-  background-color: #0728a1;
-  color: #fff;
+  background-color: black;
+  color: #ffde06;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  transform: translateY(-2px) scale(1.05); /* Add slight upward movement and scale up on hover */
+}
+
+.section .btn:mouseout {
+  transform: translateY(0) scale(1); /* Reset transform on mouseout */
 }
 .section h3 {
   font-size: 35px;
